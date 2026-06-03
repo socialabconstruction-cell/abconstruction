@@ -1,26 +1,170 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bg: #ffffff;
+  --color-paper: #ffffff;
+  --color-ink: #000000;
+  --color-ink-soft: #000000;
+  --color-muted: #000000;
+  --color-line: #000000;
+
+  /* Saved original green brand palette for future rollback. */
+  --color-saved-green-950: #0b3d2e;
+  --color-saved-green-900: #0b3d2e;
+  --color-saved-green-800: #0b3d2e;
+  --color-saved-green-700: #0b3d2e;
+  --color-saved-green-600: #0b3d2e;
+  --color-saved-green-500: #0b3d2e;
+  --color-saved-green-400: #0b3d2e;
+
+  --color-forest-950: #b11226;
+  --color-forest-900: #b11226;
+  --color-forest-800: #b11226;
+  --color-forest-700: #b11226;
+  --color-forest-600: #b11226;
+  --color-forest-500: #b11226;
+  --color-forest-400: #b11226;
+
+  --color-steel-700: #b11226;
+  --color-steel-500: #b11226;
+  --color-steel-400: #b11226;
+  --color-steel-300: #ffffff;
+
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 18px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-bg);
+  --foreground: var(--color-ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* Keep photos in true color */
+img,
+video {
+  filter: none !important;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0;
+}
+
+.hero-copy {
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.58);
+}
+
+.hero-copy .btn {
+  text-shadow: none;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.hairline {
+  border-color: color-mix(in oklab, var(--color-line) 100%, transparent);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary {
+  background: var(--color-forest-800);
+  color: #ffffff;
+}
+.btn-primary:hover { background: var(--color-forest-700); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid color-mix(in oklab, var(--color-ink) 18%, transparent);
+}
+.btn-ghost:hover { background: var(--color-ink); color: #ffffff; }
+
+.btn-on-dark {
+  background: var(--color-forest-900);
+  color: #ffffff;
+}
+.btn-on-dark:hover { background: var(--color-forest-900); }
+
+.btn-outline-on-dark {
+  border: 1px solid color-mix(in oklab, #ffffff 35%, transparent);
+  color: #ffffff;
+}
+.btn-outline-on-dark:hover { background: #ffffff; color: var(--color-forest-900); }
+
+.section {
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.container-x {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+@keyframes float-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { animation: float-up 0.9s ease both; }
+
+.ring-soft {
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.04),
+    0 24px 60px -30px rgba(0, 0, 0, 0.25);
+}
+
+.divider-dot::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.5;
+  margin: 0 0.65rem;
+  vertical-align: middle;
 }

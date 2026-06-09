@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import IntroSplit from "@/components/IntroSplit";
 import MissionVision from "@/components/MissionVision";
@@ -11,6 +12,10 @@ import EdmontonSection from "@/components/EdmontonSection";
 import TestimonialStrip from "@/components/TestimonialStrip";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (

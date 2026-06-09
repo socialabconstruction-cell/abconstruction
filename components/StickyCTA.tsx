@@ -13,7 +13,7 @@ export default function StickyCTA() {
         >
           <IconPhone size={16} /> Call
         </a>
-        <Link href="#contact" className="btn btn-on-dark flex-1 justify-center">
+        <Link href="/contact" className="btn btn-on-dark flex-1 justify-center">
           Request
           <IconArrowUpRight size={16} />
         </Link>

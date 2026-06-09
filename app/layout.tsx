@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
+import JsonLd from "@/components/JsonLd";
+import { localBusinessSchema, websiteSchema } from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://abconstructiongroup.ca"),
   title: {
     default: "AB Construction Group | Edmonton Concrete, Foundations & Excavation",
     template: "%s | AB Construction Group",
@@ -42,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

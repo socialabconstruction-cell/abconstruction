@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { IconChevronDown } from "./Icons";
 
-const FAQS = [
+export const FAQS = [
   {
     question: "What areas do you serve?",
     answer:

@@ -4,12 +4,12 @@ import { SERVICES } from "@/lib/services";
 import { IconArrowUpRight, IconMail, IconPhone, IconPin } from "./Icons";
 
 const COMPANY = [
-  { href: "#about", label: "About" },
-  { href: "#why-us", label: "Why Choose Us" },
-  { href: "#work", label: "Our Work" },
-  { href: "#process", label: "Process" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/projects", label: "Our Work" },
+  { href: "/#why-us", label: "Why Choose Us" },
+  { href: "/#reviews", label: "Reviews" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 function MapleLeaf({ className = "" }: { className?: string }) {
@@ -54,7 +54,7 @@ export default function Footer() {
             </h2>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <Link href="#contact" className="btn btn-on-dark">
+            <Link href="/contact" className="btn btn-on-dark">
               Request a Quote
               <IconArrowUpRight size={16} />
             </Link>
@@ -108,7 +108,7 @@ export default function Footer() {
               {SERVICES.map((s) => (
                 <li key={s.slug}>
                   <Link
-                    href={`#service-${s.slug}`}
+                    href={`/services/${s.slug}`}
                     className="text-white transition-colors hover:text-white"
                   >
                     {s.shortTitle}

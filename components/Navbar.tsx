@@ -7,9 +7,9 @@ import { SERVICES } from "@/lib/services";
 import { IconArrowUpRight, IconChevronDown } from "./Icons";
 
 const NAV = [
-  { href: "#work", label: "Projects" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/projects", label: "Projects" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -52,14 +52,14 @@ export default function Navbar() {
             <Link href="/" className={link}>
               Home
             </Link>
-            <Link href="#about" className={link}>
+            <Link href="/about" className={link}>
               About
             </Link>
 
             {/* Services dropdown */}
             <div className="relative group">
               <Link
-                href="#services"
+                href="/services"
                 className={`inline-flex items-center gap-1 ${link}`}
               >
                 Services
@@ -69,17 +69,26 @@ export default function Navbar() {
                 />
               </Link>
               <div className="invisible absolute left-0 top-full pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                <div className="grid w-[34rem] grid-cols-2 gap-1 rounded-xl bg-[color:var(--color-paper)] p-2 ring-1 ring-[color:var(--color-line)] shadow-2xl">
-                  {SERVICES.map((s) => (
-                    <Link
-                      key={s.slug}
-                      href={`#service-${s.slug}`}
-                      className="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[color:var(--color-ink)] transition-colors hover:bg-[color:var(--color-forest-900)] hover:text-white"
-                    >
-                      {s.shortTitle}
-                      <IconArrowUpRight size={14} className="opacity-50" />
-                    </Link>
-                  ))}
+                <div className="w-[34rem] rounded-xl bg-[color:var(--color-paper)] p-2 ring-1 ring-[color:var(--color-line)] shadow-2xl">
+                  <div className="grid grid-cols-2 gap-1">
+                    {SERVICES.map((s) => (
+                      <Link
+                        key={s.slug}
+                        href={`/services/${s.slug}`}
+                        className="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[color:var(--color-ink)] transition-colors hover:bg-[color:var(--color-forest-900)] hover:text-white"
+                      >
+                        {s.shortTitle}
+                        <IconArrowUpRight size={14} className="opacity-50" />
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    href="/services"
+                    className="mt-1 flex items-center justify-between gap-3 rounded-lg border-t border-[color:var(--color-line)] px-3 pb-1 pt-3 text-sm font-semibold text-[color:var(--color-forest-700)] transition-colors hover:text-[color:var(--color-forest-900)]"
+                  >
+                    View all services
+                    <IconArrowUpRight size={14} />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -93,7 +102,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2">
             <span className="hidden md:inline-flex">
-              <Link href="#contact" className="btn btn-on-dark text-sm">
+              <Link href="/contact" className="btn btn-on-dark text-sm">
                 Request a Quote
                 <IconArrowUpRight size={16} />
               </Link>
@@ -134,7 +143,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="#about"
+              href="/about"
               onClick={() => setOpen(false)}
               className="block py-2.5 font-medium text-white"
             >
@@ -164,13 +173,20 @@ export default function Navbar() {
                 {SERVICES.map((s) => (
                   <Link
                     key={s.slug}
-                    href={`#service-${s.slug}`}
+                    href={`/services/${s.slug}`}
                     onClick={() => setOpen(false)}
                     className="block py-2 text-sm text-white/70"
                   >
                     {s.shortTitle}
                   </Link>
                 ))}
+                <Link
+                  href="/services"
+                  onClick={() => setOpen(false)}
+                  className="col-span-2 mt-1 block py-2 text-sm font-semibold text-[color:var(--color-steel-300)]"
+                >
+                  View all services →
+                </Link>
               </div>
             </div>
 
@@ -186,7 +202,7 @@ export default function Navbar() {
             ))}
 
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="btn btn-on-dark w-full justify-center mt-3"
             >

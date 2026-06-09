@@ -25,7 +25,7 @@ export default function ServicesGrid() {
             <Link
               key={s.slug}
               id={`service-${s.slug}`}
-              href="#contact"
+              href={`/services/${s.slug}`}
               className="group relative flex h-full flex-col overflow-hidden rounded-lg bg-[color:var(--color-paper)] ring-1 ring-[color:var(--color-line)] transition-all hover:ring-[color:var(--color-forest-700)] hover:-translate-y-1 scroll-mt-28"
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-[color:var(--color-line)]">

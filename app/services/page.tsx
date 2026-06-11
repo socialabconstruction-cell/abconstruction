@@ -3,6 +3,9 @@ import { SERVICES } from "@/lib/services";
 import SplitHero from "@/components/SplitHero";
 import ServiceCard from "@/components/ServiceCard";
 import ServiceAreas from "@/components/ServiceAreas";
+import WorkPortfolio from "@/components/WorkPortfolio";
+import StatsBanner from "@/components/StatsBanner";
+import TestimonialStrip from "@/components/TestimonialStrip";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, servicesItemListSchema } from "@/lib/seo";
@@ -69,6 +72,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <StatsBanner />
+
       {/* Full-site package band */}
       <section className="bg-black text-white">
         <div className="container-x grid items-center gap-10 py-20 md:py-24 lg:grid-cols-2 lg:gap-16">
@@ -105,6 +110,14 @@ export default function ServicesPage() {
           </ul>
         </div>
       </section>
+
+      <WorkPortfolio
+        eyebrow="Portfolio"
+        heading="Recent work from Edmonton job sites"
+        intro="A sample of the foundations, pours, excavation, and full-site packages our crews have delivered across Greater Edmonton and Alberta."
+      />
+
+      <TestimonialStrip />
 
       <ServiceAreas
         eyebrow="Where We Work"

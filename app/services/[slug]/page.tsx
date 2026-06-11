@@ -5,6 +5,8 @@ import { SERVICES, getService } from "@/lib/services";
 import SplitHero from "@/components/SplitHero";
 import RelatedServices from "@/components/RelatedServices";
 import ServiceAreas from "@/components/ServiceAreas";
+import WorkPortfolio from "@/components/WorkPortfolio";
+import TestimonialStrip from "@/components/TestimonialStrip";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/seo";
@@ -146,6 +148,12 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
+      <WorkPortfolio
+        eyebrow="Portfolio"
+        heading={`${service.shortTitle} & related projects`}
+        intro={`Examples of ${service.shortTitle.toLowerCase()} and connected groundwork our crews have delivered for builders across Edmonton and Alberta.`}
+      />
+
       {/* Service FAQs */}
       <section className="section bg-[color:var(--color-bg)]">
         <div className="container-x grid items-start gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
@@ -179,6 +187,8 @@ export default async function ServiceDetailPage({
           </div>
         </div>
       </section>
+
+      <TestimonialStrip />
 
       <ServiceAreas
         eyebrow="Service Areas"

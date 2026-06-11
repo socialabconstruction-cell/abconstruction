@@ -46,7 +46,7 @@ export default function Navbar() {
             scrolled ? "container-x" : "px-5 md:px-8"
           }`}
         >
-          <Logo />
+          <Logo className="h-14 w-auto md:h-16" />
 
           <nav className="hidden lg:flex items-center gap-1">
             <Link href="/" className={link}>

@@ -1,43 +1,100 @@
-import Image from "next/image";
+import Link from "next/link";
 import ContactForm from "./ContactForm";
-import { IconMail, IconPhone, IconPin } from "./Icons";
+import { IconClock, IconMail, IconPhone, IconPin } from "./Icons";
 
-const CONTACT_ITEMS = [
-  {
-    label: "Call",
-    value: "(780) 000-0000",
-    href: "tel:+17800000000",
-    Icon: IconPhone,
-  },
+type Crumb = { label: string; href?: string };
+
+const SECONDARY_ITEMS = [
   {
     label: "Email",
-    value: "info@abconstructiongroup.ca",
-    href: "mailto:info@abconstructiongroup.ca",
+    value: "abconstructiongroup1@gmail.com",
+    href: "mailto:abconstructiongroup1@gmail.com",
     Icon: IconMail,
   },
   {
-    label: "Service area",
-    value: "Greater Edmonton & Alberta",
+    label: "Address",
+    value: "4912 Roper Road, Edmonton, AB T6B 3T7",
+    href: "https://www.google.com/maps/search/?api=1&query=4912+Roper+Road+Edmonton+AB+T6B+3T7",
     Icon: IconPin,
+  },
+  {
+    label: "Hours",
+    value: "Monday–Saturday",
+    Icon: IconClock,
   },
 ];
 
-export default function ContactSection() {
+export default function ContactSection({
+  eyebrow = "Request a Quote",
+  heading = "Request your free quote.",
+  intro = "Fill out the form and we will respond with scope, schedule notes, and the next step for your site — usually within one business day.",
+  breadcrumbs,
+  topPadded = false,
+}: {
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  breadcrumbs?: Crumb[];
+  topPadded?: boolean;
+}) {
   return (
-    <section id="contact" className="section bg-[color:var(--color-bg)] scroll-mt-24">
+    <section
+      id="quote"
+      className={`section bg-[color:var(--color-bg)] scroll-mt-24 ${
+        topPadded ? "pt-36! md:pt-44!" : ""
+      }`}
+    >
       <div className="container-x grid items-stretch gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div className="flex h-full flex-col">
-          <p className="eyebrow text-[color:var(--color-forest-700)]">Contact</p>
+          {breadcrumbs && (
+            <nav className="mb-6 flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
+              {breadcrumbs.map((b, i) => (
+                <span key={i} className="inline-flex items-center gap-2">
+                  {b.href ? (
+                    <Link
+                      href={b.href}
+                      className="transition-colors hover:text-[color:var(--color-forest-700)]"
+                    >
+                      {b.label}
+                    </Link>
+                  ) : (
+                    <span className="font-medium text-[color:var(--color-ink)]">{b.label}</span>
+                  )}
+                  {i < breadcrumbs.length - 1 && <span className="opacity-40">/</span>}
+                </span>
+              ))}
+            </nav>
+          )}
+
+          <p className="eyebrow text-[color:var(--color-forest-700)]">{eyebrow}</p>
           <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05] font-medium mt-4">
-            Tell us about your project.
+            {heading}
           </h2>
           <p className="mt-6 max-w-md text-[color:var(--color-ink-soft)] leading-relaxed">
-            Send the project details and we will respond with scope, schedule notes, and the next
-            step for your site.
+            {intro}
           </p>
 
-          <div className="mt-9 space-y-5 border-y border-[color:var(--color-line)] py-6">
-            {CONTACT_ITEMS.map((item) => {
+          {/* Prominent phone CTA — call directly */}
+          <a
+            href="tel:+17808185555"
+            className="group mt-8 flex items-center justify-between gap-4 rounded-2xl bg-[color:var(--color-forest-900)] p-5 text-white transition-colors hover:bg-[color:var(--color-forest-950)]"
+          >
+            <span>
+              <span className="block text-[10px] font-semibold uppercase tracking-[0.22em] text-[color:var(--color-steel-300)]">
+                Prefer to talk? Call us directly
+              </span>
+              <span className="mt-1.5 block font-display text-2xl md:text-3xl font-medium">
+                (780) 818-5555
+              </span>
+            </span>
+            <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white ring-1 ring-white/15 transition-colors group-hover:bg-white group-hover:text-[color:var(--color-forest-900)]">
+              <IconPhone size={22} />
+            </span>
+          </a>
+
+          {/* Secondary contact info */}
+          <div className="mt-6 space-y-5 border-t border-[color:var(--color-line)] pt-6">
+            {SECONDARY_ITEMS.map((item) => {
               const Icon = item.Icon;
               const content = (
                 <>
@@ -65,16 +122,6 @@ export default function ContactSection() {
                 </div>
               );
             })}
-          </div>
-
-          <div className="relative mt-8 min-h-[260px] flex-1 overflow-hidden rounded-lg ring-1 ring-[color:var(--color-line)]">
-            <Image
-              src="/images/unique/blueprint-review.jpg"
-              alt="Project plans being reviewed before construction work begins"
-              fill
-              sizes="(min-width: 1024px) 32vw, 100vw"
-              className="object-cover"
-            />
           </div>
         </div>
 

@@ -22,7 +22,7 @@ export default function ContactForm() {
         <h3 className="font-display text-2xl mt-5">Thanks — we're on it.</h3>
         <p className="mt-3 text-sm text-[color:var(--color-ink-soft)] max-w-md mx-auto leading-relaxed">
           We've received your request and will get back to you within one business day with next
-          steps. For urgent work, give us a call at (780) 000-0000.
+          steps. For urgent work, give us a call at (780) 818-5555.
         </p>
       </div>
     );
@@ -81,7 +81,7 @@ export default function ContactForm() {
           disabled={status === "sending"}
           className="btn btn-primary justify-center disabled:opacity-70"
         >
-          {status === "sending" ? "Sending…" : "Send Request"}
+          {status === "sending" ? "Sending…" : "Request Quote"}
           <IconArrowUpRight size={16} />
         </button>
       </div>

@@ -102,7 +102,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2">
             <span className="hidden md:inline-flex">
-              <Link href="/contact" className="btn btn-on-dark text-sm">
+              <Link href="/contact#quote" className="btn btn-on-dark text-sm">
                 Request a Quote
                 <IconArrowUpRight size={16} />
               </Link>
@@ -202,7 +202,7 @@ export default function Navbar() {
             ))}
 
             <Link
-              href="/contact"
+              href="/contact#quote"
               onClick={() => setOpen(false)}
               className="btn btn-on-dark w-full justify-center mt-3"
             >

@@ -56,7 +56,7 @@ export default function ServicesPage() {
           <div className="mb-12 max-w-2xl">
             <p className="eyebrow text-[color:var(--color-forest-700)]">What We Do</p>
             <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3.25rem)] font-medium leading-[1.05]">
-              Concrete, foundations, excavation, trucking, and site support.
+              Concrete, Foundations, Excavation, Trucking, and Site Support.
             </h2>
             <p className="mt-6 leading-relaxed text-[color:var(--color-ink-soft)]">
               Choose a service to see how we approach it, what&apos;s included, and the questions we

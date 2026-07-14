@@ -9,8 +9,8 @@ export default function IntroSplit() {
         <div className="flex h-full flex-col justify-center">
           <p className="eyebrow text-[color:var(--color-forest-700)]">About Us</p>
           <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05] font-medium mt-4">
-            Built on trust.<br />
-            <span className="text-[color:var(--color-steel-500)]">Driven by quality.</span>
+            Built on Trust.<br />
+            <span className="text-[color:var(--color-steel-500)]">Driven by Quality.</span>
           </h2>
           <p className="mt-6 text-[color:var(--color-ink-soft)] leading-relaxed text-[1.02rem] max-w-xl">
             AB Construction Group handles the groundwork that makes the rest of the build easier:

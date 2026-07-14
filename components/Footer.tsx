@@ -54,13 +54,13 @@ export default function Footer() {
             </h2>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <Link href="/contact" className="btn btn-on-dark">
+            <Link href="/contact#quote" className="btn btn-on-dark">
               Request a Quote
               <IconArrowUpRight size={16} />
             </Link>
-            <a href="tel:+17800000000" className="btn btn-outline-on-dark">
+            <a href="tel:+17808185555" className="btn btn-outline-on-dark">
               <IconPhone size={16} />
-              (780) 000-0000
+              (780) 818-5555
             </a>
           </div>
         </div>
@@ -125,21 +125,30 @@ export default function Footer() {
             <ul className="mt-5 space-y-4 text-sm">
               <li className="flex items-start gap-3 text-white">
                 <IconPin size={18} className="mt-0.5 shrink-0 text-white" />
-                <span>Serving Greater Edmonton & Alberta</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=4912+Roper+Road+Edmonton+AB+T6B+3T7"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white"
+                >
+                  4912 Roper Road
+                  <br />
+                  Edmonton, AB T6B 3T7
+                </a>
               </li>
               <li className="flex items-start gap-3 text-white">
                 <IconPhone size={18} className="mt-0.5 shrink-0 text-white" />
-                <a href="tel:+17800000000" className="hover:text-white">
-                  (780) 000-0000
+                <a href="tel:+17808185555" className="hover:text-white">
+                  (780) 818-5555
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white">
                 <IconMail size={18} className="mt-0.5 shrink-0 text-white" />
                 <a
-                  href="mailto:info@abconstructiongroup.ca"
+                  href="mailto:abconstructiongroup1@gmail.com"
                   className="break-all hover:text-white"
                 >
-                  info@abconstructiongroup.ca
+                  abconstructiongroup1@gmail.com
                 </a>
               </li>
             </ul>
@@ -153,17 +162,6 @@ export default function Footer() {
           <p>© {year} AB Construction Group. All rights reserved.</p>
           <p className="font-mono tracking-[0.2em] uppercase text-white">
             Built in Edmonton · Serving Alberta
-          </p>
-          <p>
-            Designed by{" "}
-            <a
-              href="https://townmedialabs.com"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-2 hover:opacity-80"
-            >
-              townmedialabs.com
-            </a>
           </p>
         </div>
       </div>

@@ -11,13 +11,15 @@ import {
 
 const CITIES = [
   "Edmonton",
-  "Sherwood Park",
+  "Red Deer",
   "St. Albert",
   "Spruce Grove",
   "Leduc",
   "Stony Plain",
-  "Fort Saskatchewan",
   "Beaumont",
+  "Sherwood Park",
+  "Smoky Lake",
+  "Fort Saskatchewan",
 ];
 
 const PARTNER_TYPES = [
@@ -81,13 +83,14 @@ export default function EdmontonSection() {
           {/* LEFT — narrative + service area + partner types */}
           <div className="lg:col-span-7">
             <h2 className="font-display text-[clamp(2rem,4.4vw,3.4rem)] leading-[1.05] font-medium">
-              Built in Edmonton. Engineered for Alberta builders.
+              Built in Edmonton. Working well beyond it.
             </h2>
             <p className="mt-6 max-w-2xl text-white/75 leading-relaxed">
-              We&apos;ve poured foundations and hauled aggregate on Edmonton jobs,
-              then moved on to the next build with dependable crews for groundwork,
-              concrete, waterproofing, trucking, and material supply across
-              Alberta.
+              Edmonton is home base, but our crews don&apos;t stop at the city
+              limits. From Red Deer and Leduc to Spruce Grove, Beaumont, Stony
+              Plain, St. Albert, Smoky Lake, and across central Alberta, we bring
+              the same dependable groundwork, concrete, waterproofing, trucking,
+              and material supply to every job site.
             </p>
 
             {/* Service area + Partner types — two compact lists */}
@@ -137,14 +140,14 @@ export default function EdmontonSection() {
 
             {/* CTAs */}
             <div className="mt-10 flex flex-wrap gap-3">
-              <Link href="#contact" className="btn btn-on-dark">
+              <Link href="#quote" className="btn btn-on-dark">
                 Start a Partnership
                 <IconArrowUpRight size={16} />
               </Link>
-              <Link href="#contact" className="btn btn-outline-on-dark">
+              <Link href="#quote" className="btn btn-outline-on-dark">
                 Talk to an Edmonton Crew
               </Link>
-              <a href="tel:+17800000000" className="btn btn-outline-on-dark">
+              <a href="tel:+17808185555" className="btn btn-outline-on-dark">
                 Call Scheduling
               </a>
             </div>

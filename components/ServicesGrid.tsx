@@ -11,10 +11,10 @@ export default function ServicesGrid() {
           <div>
             <p className="eyebrow text-[color:var(--color-forest-700)]">Services</p>
             <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05] font-medium mt-3 max-w-2xl">
-              Concrete, foundations, excavation, trucking, and site support.
+              Concrete, Foundations, Excavation, Trucking, and Site Support.
             </h2>
           </div>
-          <Link href="#contact" className="btn btn-ghost self-start md:self-end">
+          <Link href="#quote" className="btn btn-ghost self-start md:self-end">
             Request a Service Quote
             <IconArrowUpRight size={16} />
           </Link>

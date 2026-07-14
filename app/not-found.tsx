@@ -35,10 +35,10 @@ export default function NotFound() {
             View Services
           </Link>
           <a
-            href="tel:+17800000000"
+            href="tel:+17808185555"
             className="hidden items-center gap-2 text-sm font-medium text-[color:var(--color-ink-soft)] transition-colors hover:text-[color:var(--color-forest-700)] sm:ml-2 sm:inline-flex"
           >
-            <IconPhone size={16} /> (780) 000-0000
+            <IconPhone size={16} /> (780) 818-5555
           </a>
         </div>
       </div>

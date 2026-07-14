@@ -67,12 +67,12 @@ const PROJECTS: Project[] = [
     detail: "Lot stripping, grading, hauling, and a clean handoff for foundation crews.",
   },
   {
-    title: "Downtown Field Coordination",
-    type: "Excavation & Site Access",
-    location: "Downtown Edmonton",
-    image: "/images/unique/edmonton-downtown-skyline-night.jpg",
+    title: "Working Well Beyond Edmonton",
+    type: "Alberta-Wide Coverage",
+    location: "Red Deer to St. Albert · Alberta-wide",
+    image: "/images/unique/two-dump-trucks.jpg",
     detail:
-      "Urban staging for a high-density development with crane sequencing, grading checks, and clean handoff windows.",
+      "From Red Deer and Leduc to Spruce Grove, Beaumont, Stony Plain, St. Albert, and Smoky Lake — the same crews and equipment, on job sites across central Alberta.",
   },
 ];
 
@@ -81,7 +81,7 @@ const FEATURED = PROJECTS[0];
 function WorkCard({ p }: { p: Project }) {
   return (
     <Link
-      href="/contact"
+      href="/contact#quote"
       className="group relative overflow-hidden rounded-lg bg-[color:var(--color-paper)] ring-1 ring-[color:var(--color-line)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -156,7 +156,7 @@ export default function ProjectsPage() {
 
           {/* Featured */}
           <Link
-            href="/contact"
+            href="/contact#quote"
             className="group mt-10 grid overflow-hidden rounded-lg bg-[color:var(--color-forest-950)] text-white ring-1 ring-[color:var(--color-line)] lg:grid-cols-[1.25fr_0.75fr]"
           >
             <div className="relative min-h-[360px] overflow-hidden">

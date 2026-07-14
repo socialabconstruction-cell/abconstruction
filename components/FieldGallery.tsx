@@ -76,7 +76,7 @@ export default function FieldGallery() {
               Real work, real equipment, and the site details clients look for.
             </h2>
           </div>
-          <Link href="#contact" className="btn btn-ghost self-start md:self-end">
+          <Link href="#quote" className="btn btn-ghost self-start md:self-end">
             Book a Site Visit
             <IconArrowUpRight size={16} />
           </Link>

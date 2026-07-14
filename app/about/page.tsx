@@ -68,8 +68,8 @@ export default function AboutPage() {
       <SplitHero
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
         eyebrow="About Us"
-        title="Built on trust."
-        highlight="Driven by quality."
+        title="Built on Trust."
+        highlight="Driven by Quality."
         description="AB Construction Group handles the groundwork that makes the rest of the build easier — excavation, footings, foundation walls, waterproofing, concrete pumping, backfill, and material supply across Greater Edmonton and Alberta."
         bullets={[
           "Alberta owned & operated",

@@ -145,7 +145,7 @@ export default function WhyUs() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="#contact" className="btn btn-primary">
+            <Link href="#quote" className="btn btn-primary">
               Request a Quote
               <IconArrowUpRight size={16} />
             </Link>

@@ -36,16 +36,16 @@ export default function CtaBand({
               <p className="mt-6 max-w-xl leading-relaxed text-white/80">{body}</p>
             </div>
             <div className="flex flex-col gap-3 lg:items-end">
-              <Link href="/contact" className="btn btn-on-dark w-full justify-center lg:w-auto">
+              <Link href="/contact#quote" className="btn btn-on-dark w-full justify-center lg:w-auto">
                 Request a Quote
                 <IconArrowUpRight size={16} />
               </Link>
               <a
-                href="tel:+17800000000"
+                href="tel:+17808185555"
                 className="btn btn-outline-on-dark w-full justify-center lg:w-auto"
               >
                 <IconPhone size={16} />
-                (780) 000-0000
+                (780) 818-5555
               </a>
               <p className="mt-1 text-xs text-[color:var(--color-steel-300)] lg:text-right">
                 Edmonton & Alberta · Monday–Saturday

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import IntroSplit from "@/components/IntroSplit";
 import MissionVision from "@/components/MissionVision";
 import StatsBanner from "@/components/StatsBanner";
+import BrandBanner from "@/components/BrandBanner";
 import ServicesGrid from "@/components/ServicesGrid";
 import ProcessSection from "@/components/ProcessSection";
 import WhyUs from "@/components/WhyUs";
@@ -24,6 +25,7 @@ export default function HomePage() {
       <IntroSplit />
       <MissionVision />
       <StatsBanner />
+      <BrandBanner />
       <ServicesGrid />
       <ProcessSection />
       <WhyUs />

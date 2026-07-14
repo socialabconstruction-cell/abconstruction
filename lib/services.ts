@@ -40,19 +40,19 @@ export const SERVICES: Service[] = [
     description:
       "Efficient and reliable concrete pumping services for residential and commercial projects.",
     longDescription:
-      "Our modern line and boom pump fleet places concrete exactly where it needs to go: basements, slabs, columns, and hard-to-reach pours. Operators are certified, briefed on your site plan, and ready to deliver consistent flow with minimal mess. We coordinate with your supplier and crew so the pour stays on schedule from the first truck to the final washout.",
+      "Our modern boom pump fleet places concrete exactly where it needs to go: basements, slabs, columns, and hard-to-reach pours. Operators are certified, briefed on your site plan, and ready to deliver consistent flow with minimal mess. We coordinate with your supplier and crew so the pour stays on schedule from the first truck to the final washout.",
     detailParagraph:
       "Pumping is where a pour either runs smoothly or turns into a long, messy day. We plan the setup around your access, line the equipment up before trucks arrive, and keep flow steady so finishers can stay ahead of the concrete instead of chasing it.",
     bullets: [
-      "Line and boom pump options for any site",
+      "Boom pumps for reach, height, and hard-to-access pours",
       "Residential basements, commercial slabs, and columns",
       "Certified, safety-first operators",
       "Tight scheduling around supplier delivery",
     ],
     highlights: [
       {
-        title: "Right pump for the site",
-        body: "Line pumps for tight access and boom pumps for reach and height — matched to your pour before the day starts.",
+        title: "Reach that clears the site",
+        body: "Boom pumps give us the height and reach to place concrete over obstacles and into hard-to-access pours — set up around your site before the day starts.",
       },
       {
         title: "Steady, clean flow",
@@ -65,9 +65,9 @@ export const SERVICES: Service[] = [
     ],
     faqs: [
       {
-        question: "Do you offer both line and boom pumps?",
+        question: "What kind of concrete pumps do you run?",
         answer:
-          "Yes. Line pumps suit tight residential access and smaller pours, while boom pumps give us reach and height for slabs, columns, and elevated work. We recommend the right unit once we know your site and pour volume.",
+          "We run boom pumps, which give us the reach and height to place concrete over obstacles and into slabs, columns, basements, and elevated work. We match the right setup and reach to your site once we know the pour and access.",
       },
       {
         question: "Can you coordinate with my concrete supplier?",
@@ -77,16 +77,16 @@ export const SERVICES: Service[] = [
       {
         question: "What kind of access do you need?",
         answer:
-          "Line pumps need a clear path for hose; boom pumps need stable setup space and overhead clearance. Send photos or drawings and we will confirm the best approach.",
+          "Boom pumps need stable setup space and overhead clearance for the boom to swing. Send photos or drawings and we will confirm the best setup and reach for your pour.",
       },
     ],
     gallery: [
-      { src: "/images/services/concrete-pumping.jpg", alt: "Concrete pumping equipment supporting a site pour" },
       { src: "/images/unique/concrete-foundation-pour.jpg", alt: "Concrete being placed into a foundation pour" },
+      { src: "/images/fleet/boom-pump-front.jpg", alt: "AB Construction Group boom pump truck ready for a concrete pour" },
       { src: "/images/unique/rebar-sky.jpg", alt: "Rebar prepared for a concrete pour against the sky" },
     ],
     icon: "pump",
-    image: "/images/unique/concrete-foundation-pour.jpg",
+    image: "/images/fleet/boom-pump-side.jpg",
   },
   {
     slug: "footings-foundation-walls",
@@ -314,7 +314,7 @@ export const SERVICES: Service[] = [
       { src: "/images/unique/rocks-gravel.jpg", alt: "Washed rock and gravel stockpile" },
     ],
     icon: "truck",
-    image: "/images/unique/two-dump-trucks.jpg",
+    image: "/images/fleet/slinger-truck.jpg",
   },
   {
     slug: "excavation-truck-services",

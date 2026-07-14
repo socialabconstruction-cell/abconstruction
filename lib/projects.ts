@@ -51,11 +51,11 @@ export const PROJECTS: Project[] = [
     detail: "Lot stripping, grading, hauling, and a clean handoff for foundation crews.",
   },
   {
-    title: "Downtown Field Coordination",
-    type: "Excavation & Site Access",
-    location: "Downtown Edmonton",
-    image: "/images/unique/edmonton-downtown-skyline-night.jpg",
+    title: "Working Well Beyond Edmonton",
+    type: "Alberta-Wide Coverage",
+    location: "Red Deer to St. Albert · Alberta-wide",
+    image: "/images/unique/two-dump-trucks.jpg",
     detail:
-      "Urban staging for a high-density development with crane sequencing, grading checks, and clean handoff windows.",
+      "From Red Deer and Leduc to Spruce Grove, Beaumont, Stony Plain, St. Albert, and Smoky Lake — the same crews and equipment, on job sites across central Alberta.",
   },
 ];

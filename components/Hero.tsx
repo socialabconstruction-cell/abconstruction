@@ -24,23 +24,23 @@ export default function Hero() {
               Edmonton · Alberta · Built for the Job Site
             </p>
             <h1 className="font-display text-[clamp(2.75rem,7vw,5.5rem)] leading-[1.02] font-medium mt-5 reveal">
-              Building stronger<br />
-              <span className="text-[color:var(--color-steel-300)]">foundations.</span>
+              Building Stronger<br />
+              <span className="text-[color:var(--color-steel-300)]">Foundations.</span>
             </h1>
             <p className="mt-7 max-w-xl text-base md:text-lg text-white/85 leading-relaxed reveal">
-              Concrete pumping, footings, waterproofing, excavation, trucking, and aggregate
-              supply for Alberta builders who need clean work and dependable schedules.
+              Concrete Pumping, Footings, Waterproofing, Excavation, Trucking, and Aggregate
+              Supply for Albertan Builders who need clean work and dependable schedules.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 reveal">
-              <Link href="#contact" className="btn btn-on-dark w-full justify-center sm:w-auto">
+              <Link href="#quote" className="btn btn-on-dark w-full justify-center sm:w-auto">
                 Request a Quote
                 <IconArrowUpRight size={16} />
               </Link>
               <Link href="#services" className="btn btn-outline-on-dark w-full justify-center sm:w-auto">
                 View Our Services
               </Link>
-              <a href="tel:+17800000000" className="hidden sm:inline-flex items-center gap-2 ml-2 text-sm text-white/80 hover:text-white">
-                <IconPhone size={16} /> (780) 000-0000
+              <a href="tel:+17808185555" className="hidden sm:inline-flex items-center gap-2 ml-2 text-sm text-white/80 hover:text-white">
+                <IconPhone size={16} /> (780) 818-5555
               </a>
             </div>
           </div>

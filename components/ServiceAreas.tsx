@@ -9,8 +9,8 @@ import { SERVICE_AREAS, EDMONTON_COMMUNITIES } from "@/lib/seo";
  */
 export default function ServiceAreas({
   eyebrow = "Service Areas",
-  heading = "Serving Edmonton & communities across Alberta",
-  intro = "AB Construction Group delivers concrete, foundations, excavation, waterproofing, and aggregate supply throughout Edmonton and the surrounding region. If your build is in the Greater Edmonton Area, our crews can be on site.",
+  heading = "Serving Edmonton, Red Deer & communities across Alberta",
+  intro = "AB Construction Group delivers concrete, foundations, excavation, waterproofing, and aggregate supply well beyond Edmonton — from Red Deer and Leduc to Spruce Grove, Beaumont, Stony Plain, St. Albert, Smoky Lake, and across central Alberta. Tell us where your build is and our crews can be on site.",
 }: {
   eyebrow?: string;
   heading?: string;
@@ -33,7 +33,7 @@ export default function ServiceAreas({
               {intro}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact" className="btn btn-primary">
+              <Link href="/contact#quote" className="btn btn-primary">
                 Request a Quote
                 <IconArrowUpRight size={16} />
               </Link>

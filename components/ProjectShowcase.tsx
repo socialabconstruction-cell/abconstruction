@@ -54,11 +54,11 @@ const PROJECTS: Project[] = [
     detail: "Lot stripping, grading, hauling, and a clean handoff for foundation crews.",
   },
   {
-    title: "Downtown Edmonton Field Coordination",
-    type: "Excavation & Site Access",
-    location: "Downtown Edmonton",
-    image: "/images/unique/edmonton-downtown-skyline-night.jpg",
-    detail: "Urban staging for a high-density development with crane sequencing, grading checks, and clean handoff windows.",
+    title: "Working Well Beyond Edmonton",
+    type: "Alberta-Wide Coverage",
+    location: "Red Deer to St. Albert · Alberta-wide",
+    image: "/images/unique/two-dump-trucks.jpg",
+    detail: "From Red Deer and Leduc to Spruce Grove, Beaumont, Stony Plain, St. Albert, and Smoky Lake — the same crews and equipment, on job sites across central Alberta.",
   },
 ];
 
@@ -67,7 +67,7 @@ const FEATURED = PROJECTS[0];
 function WorkCard({ p }: { p: Project }) {
   return (
     <Link
-      href="#contact"
+      href="#quote"
       className="group relative overflow-hidden rounded-lg ring-1 ring-[color:var(--color-line)] bg-[color:var(--color-paper)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -103,7 +103,7 @@ function WorkCard({ p }: { p: Project }) {
 function FeaturedWork() {
   return (
     <Link
-      href="#contact"
+      href="#quote"
       className="group grid overflow-hidden rounded-lg bg-[color:var(--color-forest-950)] text-white ring-1 ring-[color:var(--color-line)] lg:grid-cols-[1.25fr_0.75fr]"
     >
       <div className="relative min-h-[360px] overflow-hidden">
@@ -165,7 +165,7 @@ export default function ProjectShowcase() {
               A look at the work our crews handle week after week.
             </h2>
           </div>
-          <Link href="#contact" className="btn btn-ghost self-start md:self-end">
+          <Link href="#quote" className="btn btn-ghost self-start md:self-end">
             Start Your Project
             <IconArrowUpRight size={16} />
           </Link>

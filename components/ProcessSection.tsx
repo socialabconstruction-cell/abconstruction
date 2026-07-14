@@ -47,7 +47,7 @@ export default function ProcessSection() {
             Construction gets expensive when details are guessed. Our process is simple:
             review the real site, plan the crew around the work, and leave a clean handoff.
           </p>
-          <Link href="#contact" className="btn btn-primary mt-8">
+          <Link href="#quote" className="btn btn-primary mt-8">
             Talk Through Your Site
             <IconArrowUpRight size={16} />
           </Link>

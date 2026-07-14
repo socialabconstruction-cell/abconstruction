@@ -6,7 +6,7 @@ import { PROJECTS, type Project } from "@/lib/projects";
 function WorkCard({ p }: { p: Project }) {
   return (
     <Link
-      href="/contact"
+      href="/contact#quote"
       className="group relative overflow-hidden rounded-lg bg-[color:var(--color-paper)] ring-1 ring-[color:var(--color-line)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden">

@@ -4,13 +4,50 @@ import { useState } from "react";
 import { IconArrowUpRight, IconCheck } from "./Icons";
 import { SERVICES } from "@/lib/services";
 
-export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+// Submit-only public key. SplitForms access keys are sent from the browser by
+// design, so this is not a secret — it can only write to this one form.
+const SPLITFORMS_ACCESS_KEY = "14e50ca0a82a4e1fa72206377320d924";
+const SPLITFORMS_ENDPOINT = "https://splitforms.com/api/submit";
+const PHONE = "(780) 818-5555";
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+export default function ContactForm() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [error, setError] = useState("");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("sending");
-    setTimeout(() => setStatus("sent"), 700);
+    setError("");
+
+    const fields = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const res = await fetch(SPLITFORMS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: SPLITFORMS_ACCESS_KEY,
+          subject: `Quote request from ${fields.name || "the AB Construction website"}`,
+          ...fields,
+        }),
+      });
+
+      const json = await res.json().catch(() => ({}));
+
+      if (res.ok && json.success !== false) {
+        form.reset();
+        setStatus("sent");
+      } else {
+        setStatus("error");
+        setError(json.message || "We couldn't send your request. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setError(
+        `We couldn't reach our server. Check your connection and try again, or call us at ${PHONE}.`
+      );
+    }
   }
 
   if (status === "sent") {
@@ -22,7 +59,7 @@ export default function ContactForm() {
         <h3 className="font-display text-2xl mt-5">Thanks — we're on it.</h3>
         <p className="mt-3 text-sm text-[color:var(--color-ink-soft)] max-w-md mx-auto leading-relaxed">
           We've received your request and will get back to you within one business day with next
-          steps. For urgent work, give us a call at (780) 818-5555.
+          steps. For urgent work, give us a call at {PHONE}.
         </p>
       </div>
     );
@@ -71,6 +108,14 @@ export default function ContactForm() {
           />
         </div>
       </div>
+      {status === "error" && (
+        <p
+          role="alert"
+          className="mt-6 rounded-lg bg-[color:var(--color-steel-500)]/10 px-4 py-3 text-sm text-[color:var(--color-steel-500)]"
+        >
+          {error}
+        </p>
+      )}
       <div className="mt-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <p className="text-xs text-[color:var(--color-muted)] max-w-md">
           By submitting, you agree that we may contact you about your project. We don't share your information

@@ -6,7 +6,10 @@ import { SERVICES } from "@/lib/services";
 
 // Submit-only public key. SplitForms access keys are sent from the browser by
 // design, so this is not a secret — it can only write to this one form.
-const SPLITFORMS_ACCESS_KEY = "14e50ca0a82a4e1fa72206377320d924";
+// Set NEXT_PUBLIC_SPLITFORMS_ACCESS_KEY to override; the literal is the
+// fallback so a host without the var still delivers leads.
+const SPLITFORMS_ACCESS_KEY =
+  process.env.NEXT_PUBLIC_SPLITFORMS_ACCESS_KEY || "14e50ca0a82a4e1fa72206377320d924";
 const SPLITFORMS_ENDPOINT = "https://splitforms.com/api/submit";
 const PHONE = "(780) 818-5555";
 

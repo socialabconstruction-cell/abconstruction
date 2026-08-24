@@ -42,3 +42,6 @@ next-env.d.ts
 
 # local tooling artifacts
 ruvector.db
+
+# keep the documented template
+!.env.example

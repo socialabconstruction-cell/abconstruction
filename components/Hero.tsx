@@ -1,20 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
 import { IconArrowUpRight, IconChevronDown, IconPhone } from "./Icons";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex flex-col overflow-hidden bg-[color:var(--color-forest-950)] text-[color:var(--color-bg)]">
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        poster="/videos/why-us-poster.jpg"
-      >
-        <source src="/videos/why-us.mp4" type="video/mp4" />
-      </video>
+      <Image
+        src="/images/site/boom-pump-pour-aerial.jpg"
+        alt="AB Construction Group boom pump placing concrete for a residential foundation beside a stormwater pond in Spruce Grove, Alberta"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      {/* Scrim: keeps the white hero copy legible over the bright concrete
+          and sky in the photo. */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/25" />
 
       <div className="relative flex-1 flex flex-col">
         <div className="container-x flex-1 flex flex-col justify-end pt-32 pb-16 md:pb-20">

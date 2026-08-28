@@ -22,15 +22,15 @@ const GALLERY = [
     className: "",
   },
   {
-    src: "/images/unique/bricks-bulldozer.jpg",
-    alt: "Construction workers coordinating a concrete job",
-    label: "Concrete",
+    src: "/images/site/boom-pump-branded-side.jpg",
+    alt: "AB Construction Group Alliance boom pump truck set up on a residential job site in Spruce Grove, Alberta",
+    label: "Our Fleet",
     className: "md:col-span-2",
   },
   {
-    src: "/images/unique/bulldozer-dump-truck.jpg",
-    alt: "Excavator preparing a foundation trench",
-    label: "Groundwork",
+    src: "/images/site/boom-pump-overhead-lot.jpg",
+    alt: "Overhead view of a boom pump truck with outriggers down on a new residential lot",
+    label: "Site Access",
     className: "",
   },
   {
@@ -52,9 +52,9 @@ const GALLERY = [
     className: "",
   },
   {
-    src: "/images/services/concrete-pumping.jpg",
-    alt: "Concrete pumping equipment supporting a site pour",
-    label: "Pump Support",
+    src: "/images/site/pump-truck-street-setup.jpg",
+    alt: "Boom pump truck staged on the street beside a home under construction, ready to place concrete",
+    label: "Pump Setup",
     className: "",
   },
   {

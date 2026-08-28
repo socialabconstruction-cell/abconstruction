@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -31,6 +32,9 @@ export const metadata: Metadata = {
     "Concrete Forming Edmonton",
     "Aggregate Supply Edmonton",
   ],
+  verification: {
+    google: "ZEAJ2dk6dpoSJlYbeqln6lL6SMo9Re4nsdR6Y3bc548",
+  },
   openGraph: {
     title: "AB Construction Group",
     description:
@@ -50,6 +54,27 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <StickyCTA />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1Z3HPETZXP"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1Z3HPETZXP');`}
+        </Script>
+
+        {/* Microsoft Clarity */}
+        <Script id="clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "y9jcvzpf5c");`}
+        </Script>
       </body>
     </html>
   );

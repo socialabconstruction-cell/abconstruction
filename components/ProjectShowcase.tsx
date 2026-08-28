@@ -15,7 +15,7 @@ const PROJECTS: Project[] = [
     title: "Residential Foundation Package",
     type: "Excavation & Concrete",
     location: "Greater Edmonton",
-    image: "/images/unique/excavator-green-site.jpg",
+    image: "/images/site/foundation-pour-pond-lot.jpg",
     detail: "Basement excavation, footing preparation, foundation wall coordination, and backfill.",
   },
   {
